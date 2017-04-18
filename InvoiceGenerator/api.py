@@ -33,6 +33,7 @@ class Address(UnicodeProperty):
         self.bank_account = bank_account
         self.note = note
         self.vat_id = vat_id
+        self.vat_name = u'VAT'
         self.vat_note = vat_note
         self.ir = ir
         self.logo_filename = logo_filename
@@ -44,7 +45,7 @@ class Address(UnicodeProperty):
             u'%s %s' % (self.zip, self.city)
             ]
         if self.vat_id:
-            address_line.append(_(u'Vat in: %s') % self.vat_id)
+            address_line.append(_(u'%s: %s') % (self.vat_name, self.vat_id))
 
         if self.ir:
             address_line.append(_(u'IR: %s') % self.ir)

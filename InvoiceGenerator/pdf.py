@@ -421,7 +421,7 @@ class SimpleInvoice(BaseInvoice):
         top = TOP + 1
         items = []
         if self.invoice.date and self.invoice.use_tax:
-            items.append((LEFT * mm, '%s: %s' % (_(u'Date of exposure taxable invoice'), self.invoice.date)))
+            items.append((LEFT * mm, '%s: %s' % (_(u'Date'), self.invoice.date)))
         elif self.invoice.date and not self.invoice.use_tax:
             items.append((LEFT * mm, '%s: %s' % (_(u'Date of exposure'), self.invoice.date)))
         if self.invoice.payback:

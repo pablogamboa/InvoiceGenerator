@@ -136,12 +136,12 @@ class SimpleInvoice(BaseInvoice):
         # Up line
         self.pdf.drawString(self.LEFT*mm, self.TOP*mm, self.invoice.title)
         if not self.invoice.use_tax:
-            self.pdf.drawString((self.LEFT + 90) * mm,
+            self.pdf.drawString((self.LEFT + 70) * mm,
                 self.TOP*mm,
                 _(u'Invoice num.: %s') %
                 self.invoice.number)
         else:
-            self.pdf.drawString((self.LEFT + 90) * mm,
+            self.pdf.drawString((self.LEFT + 70) * mm,
                 self.TOP*mm,
                 _(u'INVOICE: %s') %
                 self.invoice.number)
